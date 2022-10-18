@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Dejan Bigović" />
+        <meta name="description" content="Domaća zadaća 02" />
+        <title>Postani Član</title>
+    </head>
+
+    <center>
+        <body style="background-color: rgb(188, 223, 155)">
+            <h2>Popuni obrazac i postani član RK Omisalj</h2>
+            <br />
+            <form
+                action="#"
+                method="get"
+                autocomplete="off"
+                oninput='clanarina.value=parseInt(parseInt(br_mjeseci.value)*120).toString() + " kn"'
+            >
+                <fieldset style="width: 500px">
+                    <legend>Osobni podatci</legend>
+                    <label for="fname">Ime</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="Unesi ime"
+                        required
+                    />
+                    <br />
+                    <br />
+                    <label for="lname">Prezime</label><br />
+                    <input
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        placeholder="Unesi prezime"
+                        required
+                    />
+                    <br />
+                    <br />
+                    <label for="telephone">Broj telefona / mobitela</label>
+                    <br />
+                    <input type="tel" id="" name="telephone" value="" />
+                    <br />
+                    <br />
+                    <label>Odaberi spol</label>
+                    <br />
+                    <label for="male">M</label>
+                    <input type="radio" id="male" name="sex" value="M" />
+                    <label for="female">Ž</label>
+                    <input type="radio" id="female" name="sex" value="Ž" />
+                    <br /><br />
+                    <label for="date">Datum rođenja</label><br />
+                    <input type="date" required />
+                    <br />
+                    <br />
+                </fieldset>
+                <br />
+                <br />
+                <fieldset style="width: 500px">
+                    <legend>Login informacije</legend>
+                    <label for="email">Email adresa</label>
+                    <br />
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="npr. mirko.zlikovski@wb.com"
+                        size="30px"
+                        required
+                    />
+                    <br />
+                    <br />
+                    <label for="pwd">Lozinka</label>
+                    <br />
+                    <input
+                        type="password"
+                        id="pwd"
+                        name="pwd"
+                        placeholder="Unesi lozinku"
+                        required
+                    />
+                    <br />
+                    <br />
+                    <label for="rpwd">Ponovi lozinku</label><br />
+                    <input
+                        type="password"
+                        id="rpwd"
+                        name="rpwd"
+                        placeholder="Ponovi lozinku"
+                        required
+                    />
+                    <br />
+                </fieldset>
+                <br />
+                <br />
+                <label for="pozicija"
+                    >Odaberi poziciju za koju se prijavljuješ</label
+                >
+                <br />
+                <input list="pozicija" name="pozicija" />
+                <datalist id="pozicija">
+                    <option value="Lijevo krilo"></option>
+                    <option value="Desno krilo"></option>
+                    <option value="Pivot"></option>
+                    <option value="Lijevi vanjski"></option>
+                    <option value="Desni vanjski"></option>
+                    <option value="Srednji"></option>
+                    <option value="Golman"></option>
+                    <option value="Trener"></option>
+                </datalist>
+                <br />
+                <br />
+                <label for="clan">Zašto želite postati članom?</label>
+                <br />
+                <textarea
+                    name="clan"
+                    id="clan"
+                    cols="100"
+                    rows="10"
+                    placeholder="U 1000 znakova ili manje napišite zašto želite postati članom našeg kluba."
+                ></textarea>
+                <br />
+                <br />
+                <label for="br_mjeseci"
+                    >Odaberite broj mjeseci za koje ćete platiti članarinu
+                    (minimalno 1):</label
+                >
+                <input
+                    id="br_mjeseci"
+                    name="br_mjeseci"
+                    type="range"
+                    min="1"
+                    max="24"
+                    value="1"
+                /><br />
+                <label for="clanarina">Ukupna clanarina:</label>
+                <output name="clanarina" for="br_mjeseci">0</output>
+                <br />
+                <br />
+                <input
+                    type="checkbox"
+                    name="p_koristenja"
+                    id="p_koristenja"
+                    value="accepted"
+                    required
+                />
+                <label
+                    >Klikom potvrđuješ da si pročitao i razumio pravila
+                    korištenja</label
+                >
+                <br />
+                <br />
+                <input type="submit" value="Pošalji prijavu" />
+                <br />
+                <br />
+            </form>
+        </body>
+    </center>
+</html>
